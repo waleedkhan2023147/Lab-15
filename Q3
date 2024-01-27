@@ -1,0 +1,15 @@
+"""
+Metaclass for Class Decoration: Design a metaclass that acts as a decorator,
+injecting additional logic or modifying the class before its creation.
+"""
+
+class MetaDecorator(type):
+    def __new__(cls, name, bases, dct):
+        # Add or modify class attributes as needed
+        dct['additional_attribute'] = "This is an additional attribute"
+        
+        # Create the class using the default type.__new__
+        return super().__new__(cls, name, bases, dct)
+
+# Use the metaclass in the class declaration
+class DecoratedClass
