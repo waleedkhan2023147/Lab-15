@@ -1,0 +1,29 @@
+"""
+Overriding Methods in Multiple Inheritance:
+Implement methods in child classes that inherit from multiple parent classes
+and explore different override scenarios.
+"""
+
+class ParentA:
+    def common_method(self):
+        print("Common method in ParentA")
+
+class ParentB:
+    def common_method(self):
+        print("Common method in ParentB")
+
+class Child(ParentA, ParentB):
+    def specific_method(self):
+        print("Specific method in Child")
+
+# Example usage
+child_instance = Child()
+
+# Call common_method inherited from ParentA
+child_instance.common_method()
+
+# Call common_method inherited from ParentB
+child_instance.common_method()
+
+# Call specific_method defined in Child
+child_instance.specific_method()
